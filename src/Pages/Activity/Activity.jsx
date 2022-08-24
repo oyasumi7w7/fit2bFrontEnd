@@ -25,7 +25,13 @@ const Activity = (props) => {
     const lastIndex = page * limit;
     const firstIndex = lastIndex - limit;
     const info = activities.slice(firstIndex, lastIndex)
-    const lastPage = Math.ceil(activities.length / limit)
+    let lastPage = 0
+    if (activities[0] === undefined) {
+        lastPage = 1
+    } else {
+        lastPage = Math.ceil(activities.length / limit)
+    }
+
 
     function handlePrevious() {
         console.log("Previous")

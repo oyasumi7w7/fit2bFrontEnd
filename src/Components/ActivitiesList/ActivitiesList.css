@@ -136,6 +136,7 @@
     border-top-right-radius: 10px;
     align-items: center;
     font-size: 2rem;
+    color: white;
 }
 .pagination{
     background-color: rgba(248, 118, 61, 1);

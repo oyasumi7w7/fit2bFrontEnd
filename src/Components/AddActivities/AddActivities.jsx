@@ -53,7 +53,7 @@ function AddActivities(props) {
       date: startDate,
       img: image
     };
-    instance.post('http://fit2b-backend.vercel.app/activities/create', data).then(navigate('/activity')
+    instance.post('/activities/create', data).then(navigate('/activity')
     )
 
   };

@@ -43,7 +43,7 @@ const Login = () => {
         }
 
         const checkLogin = async (user_name = data.user_name) => {
-            const response = await instance.get('/users/signup/check', { params: { user_name: user_name } });
+            const response = await axios.get('fit2b-backend.vercel.app/users/signup/check', { params: { user_name: user_name } });
             if (!response.data) {
                 Swal.fire({
                     icon: 'error',

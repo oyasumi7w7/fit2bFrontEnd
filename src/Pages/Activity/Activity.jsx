@@ -76,7 +76,8 @@ const Activity = (props) => {
                     'Your file has been deleted.',
                     'success'
                 )
-                instance.delete(`/activities/${params}`).then(
+                instance.delete(`/activities/${params}`)
+                .then(
                     window.location.reload(false)
                 )
 

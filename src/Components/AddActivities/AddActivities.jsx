@@ -54,22 +54,22 @@ function AddActivities(props) {
       date: startDate,
       img: image
     };
-    instance.post('/activities/create', data).then(
-      Swal.fire({
-          position: 'center',
-          icon: 'success',
-          title: 'Your work has been saved',
-          showConfirmButton: true,
+    instance.post('/activities/create', data)
+    .then(() => Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: true,
       }).then((result) => {
-          if (result.isConfirmed) {
+        if (result.isConfirmed) {
 
-              navigate('/activity')
+          navigate('/activity')
 
 
-          }
+        }
 
       })
-  )
+    )
 
   };
 

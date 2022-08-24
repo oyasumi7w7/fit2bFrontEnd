@@ -53,7 +53,8 @@ function AddActivities(props) {
       date: startDate,
       img: image
     };
-    instance.post('/activities/create', data).then(navigate('/activity')
+    instance.post('/activities/create', data).then(
+      navigate('/activity')
     )
 
   };

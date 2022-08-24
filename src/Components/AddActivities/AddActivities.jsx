@@ -5,6 +5,7 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom'
 import useToken from '../../useToken';
 import { instance } from '../../api'
+import Swal from "sweetalert2";
 
 function AddActivities(props) {
   const [startDate, setStartDate] = useState(new Date());
@@ -54,8 +55,21 @@ function AddActivities(props) {
       img: image
     };
     instance.post('/activities/create', data).then(
-      navigate('/activity')
-    )
+      Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Your work has been saved',
+          showConfirmButton: true,
+      }).then((result) => {
+          if (result.isConfirmed) {
+
+              navigate('/activity')
+
+
+          }
+
+      })
+  )
 
   };
 

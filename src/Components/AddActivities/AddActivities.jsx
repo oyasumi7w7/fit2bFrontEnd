@@ -15,7 +15,7 @@ function AddActivities(props) {
   const [addTime, setTime] = useState();
   const [addType, setType] = useState();
 
-  console.log(startDate)
+  // console.log(startDate)
   const navigate = useNavigate()
 
 

@@ -78,7 +78,7 @@ const Activity = (props) => {
                 )
                 instance.delete(`/activities/${params}`)
                 .then(
-                    window.location.reload(false)
+                    ()=>window.location.reload(false)
                 )
 
             }
